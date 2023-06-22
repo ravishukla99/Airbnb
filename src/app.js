@@ -72,8 +72,8 @@ app.delete("/users/:id", async(req,res) => {
 app.patch("/users/:id", async(req,res) => {
 
 	try{
-		 const Hotel = await HostRagister.findByIdAndDelete(req.params.id)
-		const Hotels = await HostRagister.findOneAndUpdate(req.params.id,req.body)
+		// const Hotel = await HostRagister.findByIdAndDelete(req.params.id)
+		const Hotels = await HostRagister.findByIdAndUpdate(req.params.id,req.body)
 		res.send(Hotels)
 
 	}
