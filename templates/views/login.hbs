@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Airbnb | Holiday Homes</title>
+  <title>Airbnb | LogIn</title>
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
   <!-- Font Awecome -->
@@ -23,6 +23,57 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
   <!-- MDB -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css" rel="stylesheet" />
+
+  <style>
+		*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+		img{
+			height: 25vh;
+			width: 100%;
+		
+		}
+  
+	#newbox{
+		
+    display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	
+	
+	
+    justify-content: space-evenly;
+	
+}
+
+.container2{
+	border: 1px solid grey;
+	width: 22%;
+	margin: 2px;
+	
+	
+	
+}
+
+@media(max-width:920px) {
+    #newbox{
+        width: 100%;
+		
+		  flex-direction: column;
+        justify-content: center;
+        align-items: center;
+		      
+    }
+	.container2{
+	border: 1px solid grey;
+	width: 45%;	
+}
+	
+} 
+
+	</style>
 </head>
   <body>
  <!-- This is login and signup form created partial and inclued here -->
@@ -36,7 +87,7 @@
     <!-- Navbar logo added here -->
     <div class="logo">
       <a href="/"><img src="/image/site-logo.png" alt="logo"></a>
-      <span>airbnb</span>
+      <span class="mx-4">airbnb</span>
     </div>
 
     <!-- This is middle searchbar of our website -->
@@ -212,30 +263,7 @@
           </div>
         </div>
       </div>
-      
-      {{!-- <div class=" col-12 col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up">
-        <div class="card">
-          <i class="fa-regular fa-heart"></i>
-          <a href="/details/Thung Samo"><img class="card-img " src="https://a0.muscache.com/im/pictures/7a83743c-b733-482a-aa4a-aa28e3fa9469.jpg?im_w=1200" class="card-img-top" alt="image"></a>
-
-          <div class="card-body">
-            <span class="card-text location">
-              <b>
-                Thung Samo, Phetchabun, Thailand
-              </b>
-            </span>
-            <span class="card-text text-start text-secondary">
-              Thung Samo
-            </span>
-            <span class="card-text price text-start">
-              <b>₹ 19,999</b> night
-            </span>
-
-          </div>
-        </div>
-      </div>
-      
-      <div class=" col-12 col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up">
+	   <div class=" col-12 col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up">
         <div class="card">
           <i class="fa-regular fa-heart"></i>
           <a href="/details/Cute Riverside Cottage 200 mtrs to Morjim Beach"><img class="card-img " src="https://a0.muscache.com/im/pictures/86fdcee7-3196-4586-a770-5ba106d3dfb3.jpg?im_w=1200" class="card-img-top" alt="image"></a>
@@ -278,28 +306,32 @@
           </div>
         </div>
       </div>
+  
+	
       
-      <div class=" col-12 col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up">
+      {{!-- <div class=" col-12 col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up">
         <div class="card">
           <i class="fa-regular fa-heart"></i>
-          <a href="/details/Şehir merkezine çok yakın doğa içinde tinyhouse..."><img class="card-img " src="https://a0.muscache.com/im/pictures/cb4eb409-2597-4632-b561-50ceb448fe03.jpg?im_w=1200" class="card-img-top" alt="image"></a>
+          <a href="/details/Thung Samo"><img class="card-img " src="https://a0.muscache.com/im/pictures/7a83743c-b733-482a-aa4a-aa28e3fa9469.jpg?im_w=1200" class="card-img-top" alt="image"></a>
 
           <div class="card-body">
             <span class="card-text location">
               <b>
-                Uludağ, Bursa, Turkey
+                Thung Samo, Phetchabun, Thailand
               </b>
             </span>
             <span class="card-text text-start text-secondary">
-              Şehir merkezine çok yakın doğa içinde tinyhouse...
+              Thung Samo
             </span>
             <span class="card-text price text-start">
-              <b>₹  12,456</b> night
+              <b>₹ 19,999</b> night
             </span>
 
           </div>
         </div>
       </div>
+      
+     
       
       <div class=" col-12 col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up">
         <div class="card">
@@ -322,6 +354,7 @@
           </div>
         </div>
       </div> --}}
+	  
       
       <div class=" col-12 col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up">
         <div class="card">
@@ -346,7 +379,13 @@
       </div>
       
     </div>
+
   </section>
+	  {{!-- new data added --}}
+
+<div id="newbox">
+	
+</div>
 
   <!-- card ends here -->
   <div class="bottom-footer">
@@ -477,6 +516,52 @@
   type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/#[[latestVersion]]#/mdb.min.js"
 ></script>
+
+
+<script>
+async function getdata(){
+ var Hoteldata = await fetch("http://localhost:3200/users")
+ var data2 = await Hoteldata.json()
+ apenddata(data2.Hotels)
+
+}
+getdata()
+
+function apenddata(data){
+   data.map(ele=>{
+    let container1 = document.createElement("div")
+	container1.classList.add("container2")
+
+	let card = document.createElement('div')
+	card.classList.add("card")
+	
+
+	let image = document.createElement("img")
+	image.src = ele.Image
+
+	let container2 = document.createElement("div")
+	container2.classList.add("card-body")
+	
+
+	let heading = document.createElement("h5")
+	heading.innerText=ele.Dist +`,`+ ele.Country
+
+	let para = document.createElement('p')
+	para.innerText= ele.Propertyname
+
+	let price = document.createElement("b")
+	price.innerHTML = `Price `+ele.Price +` ₹ ` + `night`
+
+	
+   container2.append(heading,para,price)
+	container1.append(card,image,container2)
+  document.getElementById("newbox").append(container1)
+ 
+	console.log(ele)
+
+   })
+}
+</script>
 
 </body>
 

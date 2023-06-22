@@ -23,7 +23,7 @@
 	
 }
 
-.container{
+.container2{
 	border: 1px solid grey;
 	width: 22%;
 	margin: 2px;
@@ -42,7 +42,7 @@
 		
         
     }
-	.container{
+	.container2{
 	border: 1px solid grey;
 	width: 45%;
 	
@@ -305,9 +305,9 @@
 
 
 
-<!-- This is card that stores all hotels information this card is looped using foreach
-       data get from mongodb atlas sampledatabase -->
-{{!-- <section class="container">
+ {{!-- This is card that stores all hotels information this card is looped using foreach --}}
+       {{!-- data get from mongodb atlas sampledatabase  --}}
+ <section class="container">
 
 	<div class="row gy-1">
 
@@ -408,6 +408,51 @@
 		</div>
 
 		<div class=" col-12 col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up">
+        <div class="card">
+          <i class="fa-regular fa-heart"></i>
+          <a href="/details/Cute Riverside Cottage 200 mtrs to Morjim Beach"><img class="card-img " src="https://a0.muscache.com/im/pictures/86fdcee7-3196-4586-a770-5ba106d3dfb3.jpg?im_w=1200" class="card-img-top" alt="image"></a>
+
+          <div class="card-body">
+            <span class="card-text location">
+              <b>
+                Morjim, Goa
+              </b>
+            </span>
+            <span class="card-text text-start text-secondary">
+              Cute Riverside Cottage 200 mtrs to Morjim Beach
+            </span>
+            <span class="card-text price text-start">
+              <b>₹ 19,111</b> night
+            </span>
+
+          </div>
+        </div>
+      </div>
+      
+      <div class=" col-12 col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up">
+        <div class="card">
+          <i class="fa-regular fa-heart"></i>
+          <a href="/details/Modern ranch cabin at the base of the mountains!"><img class="card-img " src="https://a0.muscache.com/im/pictures/a017859a-f4b8-499b-b871-f830b6053ad6.jpg?im_w=1200" class="card-img-top" alt="image"></a>
+
+          <div class="card-body">
+            <span class="card-text location">
+              <b>
+                Westcliffe, Colorado, United States
+              </b>
+            </span>
+            <span class="card-text text-start text-secondary">
+              Modern ranch cabin at the base of the mountains!
+            </span>
+            <span class="card-text price text-start">
+              <b>₹ 32,333</b> night
+            </span>
+
+          </div>
+        </div>
+      </div>
+      
+
+		<div class=" col-12 col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up">
 			<div class="card">
 				<i class="fa-regular fa-heart"></i>
 				<a href="/details/Footprint - Wilderness Experience | Cabin No.3"><img class="card-img "
@@ -458,7 +503,7 @@
 		</div>
 
 	</div>
-</section> --}}
+</section> 
 
 
 
@@ -601,7 +646,7 @@ getdata()
 function apenddata(data){
    data.map(ele=>{
     let container1 = document.createElement("div")
-	container1.classList.add("container")
+	container1.classList.add("container2")
 
 	let card = document.createElement('div')
 	card.classList.add("card")
@@ -610,8 +655,8 @@ function apenddata(data){
 	let image = document.createElement("img")
 	image.src = ele.Image
 
-	let container = document.createElement("div")
-	container.classList.add("card-body")
+	let container2 = document.createElement("div")
+	container2.classList.add("card-body")
 	
 
 	let heading = document.createElement("h5")
@@ -624,8 +669,8 @@ function apenddata(data){
 	price.innerHTML = `Price `+ele.Price +` ₹ ` + `night`
 
 	
-   container.append(heading,para,price)
-	container1.append(card,image,container)
+   container2.append(heading,para,price)
+	container1.append(card,image,container2)
   document.getElementById("newbox").append(container1)
  
 	console.log(ele)
@@ -634,38 +679,3 @@ function apenddata(data){
 }
 </script>
 </body>
-{{!-- <div class=" col-12 col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up">
-	<div class="card">
-		<i class="fa-regular fa-heart"></i>
-		<a href="/details/The LES Apartment"><img class="card-img "
-				src="https://a0.muscache.com/im/pictures/miso/Hosting-580103554611229141/original/57942774-d17b-412f-ab09-d7077cdf0f56.jpeg?im_w=1200"
-				class="card-img-top" alt="image"></a>
-
-		<div class="card-body">
-			<span class="card-text location">
-				<b>
-					New York, NY, United States
-				</b>
-			</span>
-			<span class="card-text text-start text-secondary">
-				The LES Apartment
-			</span>
-			<span class="card-text price text-start">
-				<b>₹ 11,000</b> night
-			</span>
-
-		</div>
-	</div>
-</div> --}}
-
-
-
-
-
-{{!-- <div id="newBox">
-<div class="card">
-<img src="link" />
-</div>
-<b>country name</b>
-<h4>price </h4>
-</div> --}}
