@@ -132,7 +132,7 @@
 
   <script>
   async function getdata(){
- var Hoteldata = await fetch("http://localhost:3200/users")
+ var Hoteldata = await fetch("https://airbnb-vga7.onrender.com//users")
  var data2 = await Hoteldata.json()
  apenddata(data2.Hotels)
 
@@ -179,31 +179,15 @@ function apenddata(data){
   window.location.href = '/edithome';
 };
 
- let updatedData= {
-	Price:1999,
-   } 
 
 
-     editBtn.addEventListener("click",async()=>{
-		let res = await fetch(`http://localhost:3200/users/${ele._id}`,{
-			method: "PATCH",
-            headers: 
-			{
-              "Content-Type": "application/json",
-			  },
-			  body:JSON.stringify(updatedData)
-			  }
-			  )
-			  console.log(res)
-	 getdata()
-	})
 
 
 	let delBtn = document.createElement("button")
      delBtn.innerText ="Delete"
 
     delBtn.addEventListener("click",async()=>{
-		let res = await fetch(`http://localhost:3200/users/${ele._id}`,{
+		let res = await fetch(`https://airbnb-vga7.onrender.com//users/${ele._id}`,{
 			method: "DELETE",
             headers: 
 			{
