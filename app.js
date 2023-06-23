@@ -3,9 +3,9 @@ const app = express();
 const port = process.env.PORT || 3200;
 const multer = require('multer')
 // mongoose connection
-require('./db/conn');
-const Register=require("./models/registers")
-const HostRagister = require("./models/HostHomeRegister")
+require('./src/db/conn');
+const Register=require("./src/models/registers")
+const HostRagister = require("./src/models/HostHomeRegister")
 // form data
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
@@ -13,12 +13,12 @@ const path =require('path')
 const hbs = require('hbs')
 const bcrypt = require("bcryptjs");
 const { error } = require('console');
-const template_path = path.join(__dirname,'../templates/views')  
-const partials_path = path.join(__dirname,"../templates/partials")
+const template_path = path.join(__dirname,'./templates/views')  
+const partials_path = path.join(__dirname,"./templates/partials")
 app.set("view engine", "hbs")
 app.set('views',template_path)
 hbs.registerPartials(partials_path)
-const static_path = path.join(__dirname, "./public" )
+const static_path = path.join(__dirname, "src/public" )  
 app.use(express.static(static_path));
 
 app.get('/',(req,res)=>{
@@ -43,6 +43,9 @@ app.get('/homehost',(req,res)=>{
 
 app.get('/edithome',(req,res)=>{
 	res.render('edithome')
+})
+app.get('/done',(req,res)=>{
+	res.render('resdone')
 })
 // get data from mongodb
 
@@ -72,7 +75,7 @@ app.delete("/users/:id", async(req,res) => {
 app.patch("/users/:id", async(req,res) => {
 
 	try{
-		// const Hotel = await HostRagister.findByIdAndDelete(req.params.id)
+		 const Hotel = await HostRagister.findByIdAndDelete(req.params.id)
 		const Hotels = await HostRagister.findByIdAndUpdate(req.params.id,req.body)
 		res.send(Hotels)
 
