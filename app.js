@@ -63,7 +63,7 @@ res.status(401).json(error.message)
 	}
 })
    // delete home data for admin 
-app.delete("https://airbnb-vga7.onrender.com//users/:id", async(req,res) => {
+app.delete("https://airbnb-vga7.onrender.com/users/:id", async(req,res) => {
 	try{
 		const Hotels = await HostRagister.findByIdAndDelete(req.params.id)
 		res.send(Hotels)
@@ -74,7 +74,7 @@ app.delete("https://airbnb-vga7.onrender.com//users/:id", async(req,res) => {
 			}
 })
     // Edit Home data for admin
-app.patch("https://airbnb-vga7.onrender.com//users/:id", async(req,res) => {
+app.patch("https://airbnb-vga7.onrender.com/users/:id", async(req,res) => {
 
 	try{
 		 const Hotel = await HostRagister.findByIdAndDelete(req.params.id)
