@@ -2,8 +2,10 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3200;
 const multer = require('multer')
+require('dotenv').config()
 // mongoose connection
 require('./src/db/conn');
+
 const Register=require("./src/models/registers")
 const HostRagister = require("./src/models/HostHomeRegister")
 // form data
