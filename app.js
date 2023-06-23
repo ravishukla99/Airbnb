@@ -51,7 +51,7 @@ app.get('/done',(req,res)=>{
 })
 // get data from mongodb
 
-app.get('/users',async(req,res)=>{
+app.get('https://airbnb-vga7.onrender.com/users',async(req,res)=>{
 	try{
 const Hotels = await HostRagister.find().lean().exec()
  res.status(200).json({Hotels})
