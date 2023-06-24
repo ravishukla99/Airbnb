@@ -51,7 +51,7 @@ app.get('/done',(req,res)=>{
 })
 // get data from mongodb
 
-app.get('https://airbnb-vga7.onrender.com//users',async(req,res)=>{
+app.get('/users',async(req,res)=>{
 	try{
 const Hotels = await HostRagister.find().lean().exec()
  res.status(200).json({Hotels})
@@ -63,7 +63,7 @@ res.status(401).json(error.message)
 	}
 })
    // delete home data for admin 
-app.delete("https://airbnb-vga7.onrender.com//users/:id", async(req,res) => {
+app.delete("/users/:id", async(req,res) => {
 	try{
 		const Hotels = await HostRagister.findByIdAndDelete(req.params.id)
 		res.send(Hotels)
@@ -74,7 +74,7 @@ app.delete("https://airbnb-vga7.onrender.com//users/:id", async(req,res) => {
 			}
 })
     // Edit Home data for admin
-app.patch("https://airbnb-vga7.onrender.com//users/:id", async(req,res) => {
+app.patch("/users/:id", async(req,res) => {
 
 	try{
 		 const Hotel = await HostRagister.findByIdAndDelete(req.params.id)

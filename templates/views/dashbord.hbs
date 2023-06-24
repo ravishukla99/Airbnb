@@ -38,6 +38,7 @@
     img {
       height: 150px;
 	  border-radius: 20px;
+	  width: 20%;
     }
 
     h1 {
@@ -132,7 +133,7 @@
 
   <script>
   async function getdata(){
- var Hoteldata = await fetch("https://airbnb-vga7.onrender.com//users")
+ var Hoteldata = await fetch("/users")
  var data2 = await Hoteldata.json()
  apenddata(data2.Hotels)
 
@@ -187,7 +188,7 @@ function apenddata(data){
      delBtn.innerText ="Delete"
 
     delBtn.addEventListener("click",async()=>{
-		let res = await fetch(`https://airbnb-vga7.onrender.com//users/${ele._id}`,{
+		let res = await fetch(`/users/${ele._id}`,{
 			method: "DELETE",
             headers: 
 			{

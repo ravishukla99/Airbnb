@@ -165,7 +165,7 @@
 	}
 	
      document.getElementById("updateBtn").addEventListener("click",async()=>{
-		let res = await fetch(`https://airbnb-vga7.onrender.com/users/${hotel._id}`,{
+		let res = await fetch(`/users/${hotel._id}`,{
 			method: "PATCH",  //for edit 
             headers: 
 			{
@@ -177,7 +177,7 @@
 			  )
 			  console.log(res)
 			  localStorage.clear()
-			  window.location.href="https://airbnb-vga7.onrender.com/"	 
+			  window.location.href="http://localhost:3200/"	 
 	})
   </script>
 </body>

@@ -7,8 +7,7 @@
 }
 		img{
 			height: 25vh;
-			width: 100%;
-		
+			width: 100%;		
 		}
   
 	#newbox{
@@ -16,19 +15,13 @@
     display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	
-	
-	
     justify-content: space-evenly;
 	
 }
-
 .container2{
-	border: 1px solid grey;
-	width: 22%;
-	margin: 2px;
-	
-	
+	border-radius: 20px;
+	width: 20%;
+	margin: 1px;
 	
 }
 
@@ -43,10 +36,9 @@
         
     }
 	.container2{
-	border: 1px solid grey;
-	width: 45%;
 	
-	
+	width: 40%;
+		
 }
 	
 } 
@@ -633,7 +625,7 @@
 
 <script>
 async function getdata(){
- var Hoteldata = await fetch("https://airbnb-vga7.onrender.com//users")
+ var Hoteldata = await fetch("/users")
  var data2 = await Hoteldata.json()
  apenddata(data2.Hotels)
 
