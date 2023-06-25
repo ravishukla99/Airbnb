@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3200;
+const port = process.env.PORT || 4000;
 const multer = require('multer')
 require('dotenv').config()
 // mongoose connection
@@ -49,6 +49,7 @@ app.get('/edithome',(req,res)=>{
 app.get('/done',(req,res)=>{
 	res.render('resdone')
 })
+
 // get data from mongodb
 
 app.get('/users',async(req,res)=>{
@@ -92,6 +93,9 @@ app.post("/register", async(req,res)=>{
 console.log(req.body)	
 try{
 	const password = req.body.password;
+	// if(password.length<4){
+	// 	res.send("password to short")
+	//    }
 	const cpassword = req.body.confirmpassword;
 
 	if(password === cpassword){
@@ -118,6 +122,7 @@ app.post("/login",async(req,res)=>{
 	try{
    const email = req.body.email;
    const Password =req.body.password
+  
    const useremail = await Register.findOne({email:email});
 
    bcrypt
@@ -209,5 +214,5 @@ app.post("/hosthome", async(req,res)=>{
        
 
 app.listen(port,()=>{
-	console.log('server started 3200')
+	console.log('server started 4000')
 })
